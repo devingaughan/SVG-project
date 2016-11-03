@@ -8,51 +8,54 @@
   </head>
   <body>
     <h1>SVG animation</h1>
+    <h2> Here we have the wonders of a chest of gold opening in the eliptical sunlight.....<br>life!</h2>
   <svg width="100%" viewBox="0 0 800 400" style="background-color: #007A8A">
     <!--inside-->
     <rect x="350" y="200" width="225" height="50" fill="black">
-    <animate attributeName="y" from="200" to="150" dur="10s"/>
+    <animate id="tree" attributeName="y" from="200" to="150" dur="10s" begin="lock.end" fill="freeze"/>
   <!--  <animate attributeName="height" from="50" to="150" dur="10s"/> -->
     </rect>
     <!-- trunk -->
     <rect x="335" y="150" width="225" height="50" fill="#ffcc66">
-    <animate attributeName="y" from="150" to="100" dur="10s"/>
+    <animate id="tree" attributeName="y" from="150" to="100" dur="10s" begin="lock.end" fill="freeze"/>
     <!--<animate attributeName="height" from="50" to="25" dur="10"/> -->
     </rect>
     <!-- balls-->
     <circle cx= "350" cy="200" r="50" fill="#996600">
-      <animate attributeName="cy" from="200" to="150" dur="10"/>
+      <animate id="tree" attributeName="cy" from="200" to="150" dur="10" begin="lock.end" fill="freeze"/>
     </circle>
       <!-- trunk -->
     <rect x="300" y="200" width="100" height="100" fill="#996600">
-          <animate attributeName="y" from="200" to="150" dur="10"/>
+          <animate id="tree" attributeName="y" from="200" to="150" dur="10" begin="lock.end" fill="freeze"/>
     </rect>
     <!-- balls -->
     <circle cx= "550" cy="200" r="50" fill="#996600">
-      <animate attributeName="cy" from="200" to="150" dur="10"/>
+      <animate id="tree" attributeName="cy" from="200" to="150" dur="10" begin="lock.end" fill="freeze"/>
     </circle>
     <!--square with circle -->
     <rect x="500" y="200" width="100" height="100" fill="#996600">
-      <animate attributeName="y" from="200" to="150" dur="10"/>
+      <animate id="tree" attributeName="y" from="200" to="150" dur="10" begin="lock.end" fill="freeze"/>
     </rect>
     <!-- base -->
+    <image x="375" y="200" width="100" height="100" xlink:href="http://vignette3.wikia.nocookie.net/zelda/images/7/75/Heart_Container_(Skyward_Sword).png/revision/latest?cb=20111122235603">
+      <animate attributeName="y" from="200" to="100" dur="5" begin="tree.end" fill="freeze" />
+    </image>
     <rect x="300" y="200" width="300" height="200" fill="#663300">
     </rect>
-    <rect x="425" y="175" width="50" height="50" fill="grey">
-      <animate attributeName="opacity" from="1" to="0" begin="click" dur="10"/>
+    <rect  x="425" y="175" width="50" height="50" fill="grey">
+      <animate id="lock" attributeName="opacity" from="1" to="0" begin="click" dur="3" fill="freeze"/>
     </rect>
 
-
-
-       <circle cx="40" cy="50" r="20" fill="yellow">
+       <circle cx="40" cy="50" r="70" fill="yellow">
          <animateTransform attributeName="transform"
                            attributeType="XML"
                            type="rotate"
                            from="0 60 70"
                            to="360 60 70"
-                           dur="1s"
+                           dur="6s"
                            repeatCount="indefinite"/>
        </circle>
+       <animate attributeName="fill" from="yellow" to="orange" dur="5" />
    </svg>
 
   <!-- <line x1="575" y1="150" x2="325" y2="150" stroke="lightgoldenrodyellow" stroke-width="8"/> -->
